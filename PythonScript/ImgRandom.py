@@ -22,7 +22,7 @@ def password(key):
     if  key == KEY:
         print("OK!! AVAILABLE THIS PROGRAM.\n")
         print("USEABLE GENRE IS AS FOLLOWS:")
-        genres = os.listdir(r"C:\work\datag")
+        genres = os.listdir(r"D:\warehouse\datag")
         print(genres)
         
         genre = input("WHAT KINDS OF DRAWING ? \n>>> ")
@@ -30,7 +30,7 @@ def password(key):
         if genre == "cancel":
             print ("OK. CANCELED.")
         else:
-            place = r"C:\work\datag\%s" %genre
+            place = r"D:\warehouse\datag\%s" %genre
             os.chdir(place)
             files = os.listdir(place)
             
