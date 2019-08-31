@@ -25,11 +25,9 @@ class ConfirmHashValue():
             if createdHashValue == preparedHashValue:
                 self.toolState.set(True)
                 mb.MultiMediaPlayerMenuBar.setToolsRelease(self.toolState.get())
-                print(self.toolState.get())
                 return
             else:
                 self.toolState.set(False)
-                print(self.toolState.get())
                 return
         return getHashValue
 

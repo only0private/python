@@ -8,6 +8,7 @@ Created on Sat Jul 27 11:54:24 2019
 import tkinter as tk
 import MultiMediaPlayerMenuBar as mb
 import ConfirmHashValue as chv
+from PIL import Image, ImageTk
 
 class MultiMediaPLayer(tk.Frame):
     
@@ -17,8 +18,16 @@ class MultiMediaPLayer(tk.Frame):
 if __name__=="__main__":    
     # 親ウィジェットの作成
     root = tk.Tk() 
-    root.geometry("600x400")
+    root.geometry("1500x844")
     root.title("Multi Media Player")
+    
+    # 背景の追加
+    img = Image.open(r'.\image\main.jpg')
+    mainImg = ImageTk.PhotoImage(img, root)
+    
+    canvas = tk.Canvas(root, bg = "black", width=1500-1, height=844-1)
+    canvas.place(x=0, y=0) 
+    canvas.create_image(0, 0, image=mainImg, anchor=tk.NW)
     
     def callBackPrintMessage(message):
         def printMessage():

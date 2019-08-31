@@ -66,15 +66,14 @@ class MultiMediaPlayerMenuBar():
         
         
     def setToolsRelease(confirmHashValue):
-        print(confirmHashValue)
         MultiMediaPlayerMenuBar.toolsRelease = confirmHashValue
         
         
     def showMP(self):
         if True == MultiMediaPlayerMenuBar.toolsRelease:
-            subWindow = tk.Tk()      # ウィジェットrootの作成      
+            subWindow = tk.Tk()    
             subWindow.geometry("300x400")
-            subWindow.title("Movie Player")   #ステータスバーの名前決定
+            subWindow.title("Movie Player")
             moviePlayer = mp.MoviePlayer(subWindow)
             moviePlayer.mainloop
         else:
